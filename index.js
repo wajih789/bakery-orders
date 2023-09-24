@@ -56,7 +56,7 @@ const userMailOptions = {
   to: userEmail,
   subject: "SweetSpot Desserts",
   html: `
-    <h2>Welcome to SweetSpot Desserts,<br> <center><span style="color: #c8a97e;">${userName}!</span></center></h2>
+    <h2>Welcome to SweetSpot Desserts,<br><br> <center><span style="color: #c8a97e;">${userName}!</span></center></h2>
     <p>Thank you for placing your order with us. Here are the details of your order:</p>
     <center><h3>Order Details</h3></center>
     <p><strong>Address:</strong> ${address}</p>
