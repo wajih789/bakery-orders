@@ -39,10 +39,9 @@ const storeMailOptions = {
   to: "vascularbundle43@gmail.com",
   subject: "New Cafe Order",
   html: `
-    <h2 style="color: #ff523b;">SweetSpot Desserts</h2>
-    <hr style="border: 1px solid #ccc;">
-    <h3>Order Details:</h3>
-    <p><strong>Name:</strong> ${userName}</p>
+    <center><h2 style="color: #c8a97e;">Great News! <br> <span style="color:#212529">You have received an order from ${userName}</span></h2></center>0
+    <hr style="border: 2px solid #c8a97e;;">
+    <center><h3>Order Details</h3></center>
     <p><strong>Email:</strong> ${userEmail}</p>
     <p><strong>Address:</strong> ${address}</p>
     <p><strong>Phone:</strong> ${phone}</p>
@@ -57,9 +56,9 @@ const userMailOptions = {
   to: userEmail,
   subject: "SweetSpot Desserts",
   html: `
-    <h2>Welcome to SweetSpot Desserts, ${userName}!</h2>
+    <h2>Welcome to SweetSpot Desserts, <span style="color: #c8a97e;">${userName}!</span></h2>
     <p>Thank you for placing your order with us. Here are the details of your order:</p>
-    <h3>Order Details:</h3>
+    <center><h3>Order Details</h3></center>
     <p><strong>Address:</strong> ${address}</p>
     <p><strong>Phone:</strong> ${phone}</p>
     <p><strong>Date:</strong> ${date}</p>
