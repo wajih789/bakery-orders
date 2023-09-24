@@ -1,8 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
-const { ObjectId } = require('mongodb');
 const cors = require("cors");
 
 
@@ -13,18 +11,12 @@ app.use(cors());
 
 const PORT = 3000;
 
-// MongoDB connection
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
 // Middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.post("/submit-welcome-note", (req, res) => {
+app.post("/submit-order", (req, res) => {
   
   const {  userName , userEmail , address , phone , date , time , itemName , itemQuantity} = req.body;
   console.log(userEmail);
