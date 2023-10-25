@@ -127,11 +127,11 @@ const transporter = nodemailer.createTransport({
 const storeMailOptions = {
   from: email,
   to: "vascularbundle43@gmail.com",
-  subject: subject,
+  subject: `New Quote from ${name}`,
   html: `
     <center><h2 style="color: #c8a97e;">Great News! <br> <span style="color:#212529">You have received a quote from ${name}</span></h2></center>
     <hr style="border: 2px solid #c8a97e;">
-    <center><h3>Message:</h3></center>
+    <center><h3>Message</h3></center>
     <p> ${message}</p>
     
     `,
@@ -143,7 +143,7 @@ const userMailOptions = {
   html: `
     <center><h2>Welcome to All County Construction,<br><br> <center><span style="color: #c8a97e;">${name}!</span></center></h2></center>
     <p>Thank you for reaching put to us. Here is your message:</p>
-    <center><h3>Message:</h3></center>
+    <center><h3>Message</h3></center>
     <p> ${message}</p>
     
     <p>Your email has been received and will be processed shortly. Thank you for choosing All County Construction!</p>
