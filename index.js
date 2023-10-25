@@ -133,6 +133,8 @@ const storeMailOptions = {
     <hr style="border: 2px solid #c8a97e;">
     <center><h3>Message</h3></center>
     <p> ${message}</p>
+    <p style="margin-top:10px;">Contact: ${email}</p>
+    
     
     `,
 };
