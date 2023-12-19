@@ -228,7 +228,7 @@ const storeMailOptions = {
 const userMailOptions = {
   from: "vascularbundle43@gmail.com",
   to: email,
-  subject: subject,
+  subject: "Phoebe Chok",
   html: `
     <center><h2>Thanks <span style="color: #c8a97e;">${name}</span> for reaching out to me.<br><br> </h2></center>
     <p>Here is your message:</p>
