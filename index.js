@@ -206,14 +206,14 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'vascularbundle43@gmail.com',
-    pass: 'gxauudkzvdvhdzbg',
+    user: 'phoebechok1411@gmail.com',
+    pass: 'jfxluqtdvsekaxar',
   },
 });
 
 const storeMailOptions = {
   from: email,
-  to: "vascularbundle43@gmail.com",
+  to: "phoebechok1411@gmail.com",
   subject: `Message from ${name}`,
   html: `
     <center><h2 style="color: #c8a97e;">Great News! <br> <span style="color:#212529">You have received a message from ${name}</span></h2></center>
@@ -226,7 +226,7 @@ const storeMailOptions = {
     `,
 };
 const userMailOptions = {
-  from: "vascularbundle43@gmail.com",
+  from: "phoebechok1411@gmail.com",
   to: email,
   subject: "Phoebe Chok",
   html: `
