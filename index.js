@@ -232,11 +232,11 @@ const userMailOptions = {
   html: `
     <center><h2>Thanks <span style="color: #c8a97e;">${name}</span> for reaching out to me.<br><br> </h2></center>
     <p>Here is your message:</p>
-    <center><h3>Message</h3></center>
     <p> ${message}</p>
     
-    <p>Your email has been received and will be processed shortly. Thank you for choosing me!</p>
-  `
+    <p>Your email has been received. Thank you for choosing me! <br> Phoebe Chock, <br> Model</p>
+  
+    `
 };
 
 // Send the email to the store
