@@ -293,7 +293,7 @@ const storeMailOptions = {
   subject: `Message from ${name}`,
   html: `
     <center><h2 style="color: black;">Great News! <br> <span style="color:#FFC72C">You have received a message from ${name}</span></h2></center>
-    <hr style="border: 2px solid black;">
+    <hr style="border: 0.5px solid black;">
     <center><h3>Message</h3></center>
     <p> ${message}</p>
     <p style="margin-top:10px;">Contact: ${email}</p>
