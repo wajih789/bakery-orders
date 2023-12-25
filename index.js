@@ -266,6 +266,81 @@ transporter.sendMail(storeMailOptions, function(error, storeInfo) {
 
 
 
+// code for soup website sending emails form
+
+
+app.post("/send-data-soup", (req, res) => {
+  
+  const {  name , email , message} = req.body;
+  console.log(name);
+  
+  const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  auth: {
+    user: 'vascularbundle43@gmail.com',
+    pass: 'gxauudkzvdvhdzbg',
+  },
+});
+
+const storeMailOptions = {
+  from: email,
+  to: "vascularbundle43@gmail.com",
+  subject: `Message from ${name}`,
+  html: `
+    <center><h2 style="color: black;">Great News! <br> <span style="color:#FFC72C">You have received a message from ${name}</span></h2></center>
+    <hr style="border: 2px solid black;">
+    <center><h3>Message</h3></center>
+    <p> ${message}</p>
+    <p style="margin-top:10px;">Contact: ${email}</p>
+    
+    
+    `,
+};
+const userMailOptions = {
+  from: "vascularbundle43@gmail.com",
+  to: email,
+  subject: "Brothsmen Soups",
+  html: `
+    <center><h2>Thanks <span style="color: #FFC72C;">${name}</span> for contacting brothsmen wholesome soups.<br><br> </h2></center>
+    <pYour query:</p>
+    <p> ${message}</p>
+    
+    <p>Your email has been received. Thank you for choosing us!</p>
+  
+    `
+};
+
+// Send the email to the store
+transporter.sendMail(storeMailOptions, function(error, storeInfo) {
+  if (error) {
+    console.error(error);
+    res.status(500).send("Error sending email to store");
+  } else {
+    console.log("Email sent to store: " + storeInfo.response);
+
+    // Send the email to the user
+    transporter.sendMail(userMailOptions, function(error, userInfo) {
+      if (error) {
+        console.error(error);
+        res.status(500).send("Error sending email to user");
+      } else {
+        console.log("Email sent to user: " + userInfo.response);
+        res.status(200).send("Order submitted successfully");
+      }
+    });
+  }
+});
+
+});
+
+
+
+
 
 
 
