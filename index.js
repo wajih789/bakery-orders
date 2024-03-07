@@ -269,9 +269,9 @@ transporter.sendMail(storeMailOptions, function(error, storeInfo) {
 // code for soup website sending emails form
 
 
-app.post("/send-data-soup", (req, res) => {
+app.post("/send-data-juan", (req, res) => {
   
-  const {  name , email , message} = req.body;
+  const {  name , email , message, subject} = req.body;
   console.log(name);
   
   const nodemailer = require("nodemailer");
@@ -290,28 +290,32 @@ const transporter = nodemailer.createTransport({
 const storeMailOptions = {
   from: email,
   to: "vascularbundle43@gmail.com",
-  subject: `Message from ${name}`,
+  subject: `Message from ${name}:${subject}`,
   html: `
-    <center><h2 style="color: black;">Great News! <br> <span style="color:#FFC72C">You have received a message from ${name}</span></h2></center>
-    <hr style="border: 0.5px solid black;">
-    <center><h3>Message</h3></center>
-    <p> ${message}</p>
-    <p style="margin-top:10px;">Contact: ${email}</p>
-    
+  <center><img src="https://i.ibb.co/qRmpwK6/two.jpg" alt="two" border="0" style="border-radius: 50%; margin-bottom: 20px; width:70px;"></center>
+   
+  <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Great News!</h2></center>
+  <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 18px; margin-bottom: 10px;"><span style="color: #FFC72C;">You have received a message from ${name}</span></h2></center>
+  <hr style="border: 0.5px solid black;">
+  <center><h3 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; margin-bottom: 10px;">Message</h3></center>
+  <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">${message}</p>
+  <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-top: 10px;">Contact: ${email}</p>
+
     
     `,
 };
 const userMailOptions = {
   from: "vascularbundle43@gmail.com",
   to: email,
-  subject: "Brothsmen Soups",
+  subject: "Juan David",
   html: `
-    <center><h2>Thanks <span style="color: #FFC72C;">${name}</span> for contacting brothsmen wholesome soups.<br><br> </h2></center>
-    <pYour query:</p>
-    <p> ${message}</p>
-    
-    <p>Your email has been received. Thank you for choosing us!</p>
+  <center><img src="https://i.ibb.co/qRmpwK6/two.jpg" alt="two" border="0" style="border-radius: 50%; margin-bottom: 20px; width:70px;"></center>
   
+  <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Thank You, <span style="color: #FFC72C;">${name}</span>!</h2></center>
+  <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">Your query:</p>
+  <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">${message}</p>
+  <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5;">Your email has been received. Thank you for contacting Juan David!</p>
+
     `
 };
 
@@ -352,7 +356,7 @@ transporter.sendMail(storeMailOptions, function(error, storeInfo) {
 
 
 app.get("/", (req,res) =>{
-  res.send("Backend server for ordering items has started running successfully...");
+  res.send("Backend server for ordering items and sending messages has started running successfully...");
 });
 
 
