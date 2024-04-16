@@ -392,7 +392,7 @@ const storeMailOptions = {
   to: "blogtejasvi@gmail.com",
   subject: `Message from ${name}:${subject}`,
   html: `
-  <center><img src="https://i.ibb.co/VQFt5vj/imgone.png" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
+  <center><img src="https://i.ibb.co/X47K3z6/myimg.jpg" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
   border-radius: 50%;
   padding:5px;
   border: 2px solid #149ddd;"></center>
@@ -412,7 +412,7 @@ const userMailOptions = {
   to: email,
   subject: "Tejasvi Nuthalapati",
   html: `
-  <center><img src="https://i.ibb.co/VQFt5vj/imgone.png" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
+  <center><img src="https://i.ibb.co/X47K3z6/myimg.jpg" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
   border-radius: 50%;
   padding:5px;
   border: 2px solid #149ddd;"></center>
