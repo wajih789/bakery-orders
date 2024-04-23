@@ -578,7 +578,7 @@ const storeMailOptions = {
   to: "vascularbundle43@gmail.com",
   subject: `Message from ${name}:${subject}`,
   html: `
-  <center><img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
+  <center><img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; width:120px; height:110px;
   border-radius: 50%;
   padding:5px;
   border: 2px solid #149ddd;"></center>
@@ -598,7 +598,7 @@ const userMailOptions = {
   to: email,
   subject: "O. Monifa Sawyerr",
   html: `
-  <center><img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; width:70px;
+  <center><img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; width:120px; height:110px;
   border-radius: 50%;
   padding:5px;
   border: 2px solid #149ddd;"></center>
