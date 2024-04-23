@@ -598,10 +598,13 @@ const userMailOptions = {
   to: email,
   subject: "O. Monifa Sawyerr",
   html: `
-  <center><img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; width:120px; height:110px;
+  <center>
+  <div style="width:80px; height:80px; display:flex; justify-content:center; align-items:center;">
+  <img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; 
   border-radius: 50%;
   padding:5px;
-  border: 2px solid #149ddd;"></center>
+  border: 2px solid #149ddd; object-fit:cover;">
+  </div></center>
    
   <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Thank You, <span style="color: #149ddd;">${name}</span>!</h2></center>
   <p style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; margin-bottom: 10px;">Your query:</p>
