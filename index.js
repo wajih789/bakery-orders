@@ -568,22 +568,25 @@ const transporter = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: {
-    user: 'vascularbundle43@gmail.com',
-    pass: 'gxauudkzvdvhdzbg',
+    user: 'sawyerr.oyinlola@gmail.com',
+    pass: 'itjvovwqkwivpzai',
   },
 });
 
 const storeMailOptions = {
   from: email,
-  to: "vascularbundle43@gmail.com",
+  to: "sawyerr.oyinlola@gmail.com",
   subject: `Message from ${name}:${subject}`,
   html: `
   <center>
-  <div style="width:80px; height:80px;">
-  <img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; 
-  border-radius: 50%;
-  padding:5px;
-  border: 2px solid #149ddd; object-fit:cover;">
+  <div style="width:80px; height:80px;border-radius:50%; display:flex; 
+  padding: 5px;
+justify-content:center;
+align-items:center; overflow:hidden;
+margin-bottom: 20px;  border: 2px solid #149ddd;
+">
+  <img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" 
+  width:100%; aspect-ratio:1; object-fit:cover; border-radius:50%;">
   </div></center>
    
   <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Great News!</h2></center>
@@ -597,16 +600,19 @@ const storeMailOptions = {
     `,
 };
 const userMailOptions = {
-  from: "vascularbundle43@gmail.com",
+  from: "sawyerr.oyinlola@gmail.com",
   to: email,
   subject: "O. Monifa Sawyerr",
   html: `
   <center>
-  <div style="width:80px; height:80px;">
-  <img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" margin-bottom: 20px; 
-  border-radius: 50%;
-  padding:5px;
-  border: 2px solid #149ddd; object-fit:cover;">
+  <div style="width:80px; height:80px;border-radius:50%; display:flex; 
+  padding: 5px;
+justify-content:center;
+align-items:center; overflow:hidden;
+margin-bottom: 20px;  border: 2px solid #149ddd;
+">
+  <img src="https://i.ibb.co/q5dqNdc/myimg.png" alt="two" border="0" style=" 
+  width:100%; aspect-ratio:1; object-fit:cover; border-radius:50%;">
   </div></center>
    
   <center><h2 style="color: #3A3A3A; font-family: Arial, sans-serif; font-size: 24px; font-weight: bold; margin-bottom: 20px;">Thank You, <span style="color: #149ddd;">${name}</span>!</h2></center>
